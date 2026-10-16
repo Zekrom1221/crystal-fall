@@ -30,8 +30,10 @@ Crystals fall from the ceiling of a cave. Walk into the start zone and press **E
 | Blue    | Shield for 3 seconds, red crystals don't hurt |
 
 - Difficulty ramps up over the first 60 seconds: crystals spawn more often (every 0.7 s → 0.2 s) and the share of red ones grows (55% → 80%).
-- Bonuses get rarer over time: the minimum gap between two green (or two blue) crystals grows by 1 s per minute, up to 10 s.
+- Bonuses get rarer over time: the minimum gap between two green (or two blue) crystals stays at 1.5 s for the first minute and a half, then grows by 1 s per minute, up to 10 s.
 - Your score is the survival time. The best time is saved between sessions.
+
+The numbers above are the values tuned in the `Game` scene; the defaults in the scripts differ.
 
 ### Controls
 
@@ -102,7 +104,7 @@ Assets/
    Unity.exe -batchmode -quit -projectPath . -executeMethod BuildScript.BuildWindows
    ```
 
-   The build goes to `Builds/Windows/`.
+   The build goes to `Builds/Windows/`. To run only the scene check, use `-executeMethod BuildScript.ValidateFromCommandLine`.
 
 To just play, download the build from [Releases](https://github.com/Zekrom1221/crystal-fall/releases/latest).
 
@@ -136,8 +138,10 @@ The code is licensed under [MIT](LICENSE). Third-party assets belong to their au
 | Синий    | Щит на 3 секунды, красные кристаллы не ранят |
 
 - Сложность растёт первые 60 секунд: кристаллы появляются чаще (раз в 0.7 с → 0.2 с), и красных становится больше (55% → 80%).
-- Бонусы со временем редеют: минимальный промежуток между двумя зелёными (или двумя синими) растёт на 1 с за минуту, до 10 с.
+- Бонусы со временем редеют: минимальный промежуток между двумя зелёными (или двумя синими) первые полторы минуты равен 1.5 с, потом растёт на 1 с за минуту, до 10 с.
 - Очки — это время выживания. Лучший результат сохраняется между запусками.
+
+Цифры выше — значения, настроенные в сцене `Game`; дефолты в скриптах другие.
 
 ### Управление
 
@@ -175,7 +179,7 @@ Unity 6 (6000.3.8f1) · C# · URP 2D с 2D-освещением · Cinemachine 2
    Unity.exe -batchmode -quit -projectPath . -executeMethod BuildScript.BuildWindows
    ```
 
-   Билд появится в `Builds/Windows/`.
+   Билд появится в `Builds/Windows/`. Только проверка сцены, без сборки: `-executeMethod BuildScript.ValidateFromCommandLine`.
 
 Чтобы просто поиграть, скачай билд из [Releases](https://github.com/Zekrom1221/crystal-fall/releases/latest).
 
