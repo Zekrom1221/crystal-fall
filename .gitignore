@@ -47,19 +47,5 @@ Desktop.ini
 # ---------- Third-party assets ----------
 # Licenses (Unity Asset Store EULA, Craftpix) forbid redistributing these files.
 # See README -> "Opening the project" for where to get them.
-/Assets/Backgrounds/
-/Assets/Backgrounds.meta
-/Assets/EF_Studio/
-/Assets/EF_Studio.meta
-/Assets/Evil Wizard 2/
-/Assets/Evil Wizard 2.meta
-/Assets/karsiori/
-/Assets/karsiori.meta
-/Assets/Sounds/
-/Assets/Sounds.meta
-/Assets/Scripts/Player/PlayerSprites/Attack1.png*
-/Assets/Scripts/Player/PlayerSprites/Attack2.png*
-/Assets/Scripts/Player/PlayerSprites/Death.png*
-/Assets/Scripts/Player/PlayerSprites/Idle.png*
-/Assets/Scripts/Player/PlayerSprites/Run.png*
-/Assets/Scripts/Player/PlayerSprites/Take hit.png*
+/Assets/ThirdParty/
+/Assets/ThirdParty.meta
