@@ -38,16 +38,24 @@ public class Player : MonoBehaviour
         _footstepSource.volume = 0.5f;
     }
 
-    private void OnEnable()
+    // Подписка в Start, а не в OnEnable: порядок Awake/OnEnable между объектами не гарантирован,
+    // и GameManager.Instance к этому моменту может быть ещё не назначен.
+    private void Start()
     {
         if (GameManager.Instance != null)
             GameManager.Instance.OnGameOver += HandleGameOver;
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         if (GameManager.Instance != null)
             GameManager.Instance.OnGameOver -= HandleGameOver;
+
+        if (_playerInputActions != null)
+        {
+            _playerInputActions.Disable();
+            _playerInputActions.Dispose();
+        }
     }
 
     private void HandleGameOver(float survivalTime)

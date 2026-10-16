@@ -32,6 +32,8 @@ public class PauseManager : MonoBehaviour
 
     private void Update()
     {
+        if (Keyboard.current == null) return;
+
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (GameManager.Instance != null && GameManager.Instance.CurrentState == GameManager.State.GameOver) return;

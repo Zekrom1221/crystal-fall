@@ -39,7 +39,7 @@ public class StartGameTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (playerInRange && !gameStarted && Keyboard.current.eKey.wasPressedThisFrame)
+        if (playerInRange && !gameStarted && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
         {
             StartCoroutine(StartCountdown());
         }
@@ -51,7 +51,6 @@ public class StartGameTrigger : MonoBehaviour
         {
             playerInRange = true;
             if (!gameStarted) ShowPrompt();
-            Debug.Log("Игрок вошёл в зону триггера старта");
         }
     }
 
@@ -61,7 +60,6 @@ public class StartGameTrigger : MonoBehaviour
         {
             playerInRange = false;
             if (!gameStarted) HideMessage();
-            Debug.Log("Игрок вышел из зоны триггера старта");
         }
     }
 
