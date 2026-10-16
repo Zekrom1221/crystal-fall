@@ -23,6 +23,7 @@ SOFTWARE.
 ---
 
 This license covers the source code and project files in this repository.
-Third-party assets used in the released game build (sprites, backgrounds,
-sound effects) belong to their respective authors and are NOT covered by
-this license. See the "Credits" section in README.md.
+Assets that are not included in the repository (third-party sprites and
+backgrounds, sound effects) are NOT covered by this license; third-party
+assets belong to their respective authors. See the "Credits" section in
+README.md.

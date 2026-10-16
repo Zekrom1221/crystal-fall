@@ -117,7 +117,7 @@ To just play, download the build from [Releases](https://github.com/Zekrom1221/c
 | Fantasy Pixel Trees | EF Studio | [Unity Asset Store](https://assetstore.unity.com/packages/2d/environments/fantasy-pixel-trees-269458) |
 | Free Crystal Cave Pixel Art Backgrounds | CraftPix.net | [craftpix.net](https://craftpix.net/freebies/free-crystal-cave-pixel-art-backgrounds/) |
 
-All four packs are free. Sound effects are third-party and are not included in the repository.
+All four packs are free. Sound effects were made with an online sound effect generator and are not included in the repository.
 
 ### License
 
@@ -192,7 +192,7 @@ Unity 6 (6000.3.8f1) · C# · URP 2D с 2D-освещением · Cinemachine 2
 | Fantasy Pixel Trees | EF Studio | [Unity Asset Store](https://assetstore.unity.com/packages/2d/environments/fantasy-pixel-trees-269458) |
 | Free Crystal Cave Pixel Art Backgrounds | CraftPix.net | [craftpix.net](https://craftpix.net/freebies/free-crystal-cave-pixel-art-backgrounds/) |
 
-Все четыре пака бесплатные. Звуковые эффекты сторонние и в репозиторий не входят.
+Все четыре пака бесплатные. Звуковые эффекты сделаны в онлайн-генераторе звуков и в репозиторий не входят.
 
 ### Лицензия
 
