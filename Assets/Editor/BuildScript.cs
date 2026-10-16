@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEditor.Build.Reporting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Проверка сцен и сборка из командной строки:
 // Unity.exe -batchmode -quit -projectPath . -executeMethod BuildScript.BuildWindows
@@ -54,10 +55,18 @@ public static class BuildScript
     // Битые ссылки на ассеты только логируются: в клоне без сторонних паков они ожидаемы.
     private static bool Validate()
     {
+        string[] scenes = GetBuildScenes();
+        if (scenes.Length == 0)
+        {
+            Debug.LogError($"{LogPrefix} No enabled scenes in Build Settings");
+            return false;
+        }
+
+        string previousScene = SceneManager.GetActiveScene().path;
         int missingScripts = 0;
         int brokenReferences = 0;
 
-        foreach (string scenePath in GetBuildScenes())
+        foreach (string scenePath in scenes)
         {
             var scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
             foreach (GameObject root in scene.GetRootGameObjects())
@@ -74,6 +83,10 @@ public static class BuildScript
                 }
             }
         }
+
+        // В редакторе возвращаем сцену, которая была открыта до проверки
+        if (!Application.isBatchMode && !string.IsNullOrEmpty(previousScene))
+            EditorSceneManager.OpenScene(previousScene, OpenSceneMode.Single);
 
         Debug.Log($"{LogPrefix} Validate: missing scripts = {missingScripts}, broken references = {brokenReferences}");
         return missingScripts == 0;
